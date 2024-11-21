@@ -1,5 +1,13 @@
-//Agregar Bloque 1
+//sw producción
+var url =window.location.href;
+var swLocation='/Demo/sw.js';
+
+//Agregar Bloque 1  sw desarrollo 
 if(navigator.serviceWorker){
+
+    if(url.includes('localhost')){
+        swLocation='/sw.js'
+    }
     navigator.serviceWorker.register('/sw.js');
 }
 
